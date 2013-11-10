@@ -1,0 +1,155 @@
+/* 
+    Created on : Nov 9, 2013, 7:39:45 PM
+    Author     : spozoga (Sebastian Pożoga)
+    WWW        : https://github.com/SebastianPozoga
+    Created for: MEET3D.PL
+    License    : MIT (http://opensource.org/licenses/MIT)
+*/
+
+
+.map{
+    display: table;
+    margin:auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.map .row{
+    display: table-row;
+}
+
+.map .cell{
+    display: table-cell;
+    width:50px;
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.map .cell .e{
+    width:85%;
+    height: 85%;
+    margin:auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*transist*/
+.map *{
+    /*-webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in;*/
+    transition-property: width, height;
+    transition-duration: 1s, 1s;
+    transition-delay: 0s, 0s;
+}
+
+
+/*palette*/
+.map .cell .e.bg{
+    background-image: -o-linear-gradient(bottom, #171717 0%, #404040 100%);
+    background-image: -moz-linear-gradient(bottom, #171717 0%, #404040 100%);
+    background-image: -webkit-linear-gradient(bottom, #171717 0%, #404040 100%);
+    background-image: -ms-linear-gradient(bottom, #171717 0%, #404040 100%);
+    background-image: linear-gradient(to bottom, #171717 0%, #404040 100%);
+}
+
+.map .cell .e.fill{
+    border: 1px solid #eee;
+    background-image: -o-linear-gradient(bottom, #E6C79C 0%, #A0693A 100%);
+    background-image: -moz-linear-gradient(bottom, #E6C79C 0%, #A0693A 100%);
+    background-image: -webkit-linear-gradient(bottom, #E6C79C 0%, #A0693A 100%);
+    background-image: -ms-linear-gradient(bottom, #E6C79C 0%, #A0693A 100%);
+    background-image: linear-gradient(to bottom, #E6C79C 0%, #A0693A 100%);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+/*randomed*/
+.map .cell .e.randed,
+.map .cell .e.randed2,
+.map .cell .e.clicked{
+    width:40%;
+    height:40%;
+}
+
+.map .cell .e:not(.randed):not(.randed2):not(.clicked):hover{
+    width:70%;
+    height:70%;
+}
+
+.map .cell .e.bg.fullscreen{
+    background-image: url("img/fullscreen.png") !important;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.map .cell .e.bg.startGame{
+    background-image: url("img/ball.png") !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/*
+    LOGO GAME - CSS
+*/
+
+.logoGame .info{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.logoGame .count{
+    font-size: .6em;
+}
+
+.logoGame .e.b0{
+    background-image: url("img/origami-birds/b0.png");
+}
+
+.logoGame .e.b1{
+    background-image: url("img/origami-birds/b1.png");
+}
+
+.logoGame .e.b2{
+    background-image: url("img/origami-birds/b2.png");
+}
+
+.logoGame .e.b3{
+    background-image: url("img/origami-birds/b3.png");
+}
+
+.logoGame .e.b4{
+    background-image: url("img/origami-birds/b4.png");
+}
+
+.logoGame .e.b5{
+    background-image: url("img/origami-birds/b5.png");
+}
+
+.logoGame .e.b6{
+    background-image: url("img/origami-birds/b6.png");
+}
+
+.logoGame .e{
+    background-size: 90%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.logoGame .timeout .e:not(.finded){
+    background: #111 !important;
+}
+
+.logoGame .timeout .e:not(.finded).clicked{
+    background: #a00 !important;
+}
